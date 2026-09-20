@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Huynh Kien",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 150, "left": -80, "attrs": {} },
+    { "type": "wokwi-breadboard", "id": "bb", "top": 150.6, "left": 223.6, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": 10, "left": 300, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:5V", "bb:tp.1", "red", [] ],
+    [ "uno:GND", "bb:tn.1", "black", [] ],
+    [ "bb:tp.5", "dht1:VCC", "red", [] ],
+    [
+      "bb:tn.5",
+      "dht1:GND",
+      "black",
+      [ "h-10.4", "v-67.3", "h-441.6", "v480", "h528", "v-460.7" ]
+    ],
+    [ "uno:2", "dht1:SDA", "green", [ "v-34.2", "h-262.1", "v345.6", "h430.1" ] ]
+  ],
+  "dependencies": {}
+}
